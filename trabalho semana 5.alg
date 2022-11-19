@@ -16,13 +16,13 @@ inicio
 para contador de 1 ate 4 faca
    escreval (" informe a ", contador, " temperatura em fahrenheit")
    leia (vfar[contador])
-   vcel[contador]<- (vfar[contador] - 32) / 1.8
-   escreval (" informe a" ,contador, "° hora")
+   vcel[contador]<- ((vfar[contador] - 32) / 1.8 )
+   escreval (" informe a" ,contador, "Â° hora")
    leia (temp[contador])
 
    para h de 1 ate 4 faca
       para j de 1 ate 4 faca
-         se vfar [j] > vfar [h] entao
+         se (vfar [j] > vfar [h])  e (vfar[h] <> 0) entao
             aux <- vfar [j]
             vfar [j]<- vfar [h]
             vfar [h]<- aux
@@ -33,7 +33,7 @@ para contador de 1 ate 4 faca
 fimpara
 
 para contador de 1 ate 4 faca
-   escreval ("a temperatura em Fahrenheit é ", vfar[contador], " que foi registrada as",temp[contador], ":00 corresponde a", vcel[contador], " graus celsius")
+   escreval ("a temperatura em Fahrenheit Ã© ", vfar[contador], " que foi registrada as",temp[contador], ":00 corresponde a", vcel[contador], " graus celsius")
 fimpara
 fimprocedimento
 
@@ -44,13 +44,13 @@ inicio
 para contador de 1 ate 4 faca
    escreval (" informe a ", contador, " temperatura em celsius")
    leia (vcel[contador])
-   vfar [contador]<- (vcel[contador] * 1.8 - 32)
-   escreval (" informe a" ,contador, "° hora")
+   vfar [contador]<- ((vcel[contador] * 1.8) + 32)
+   escreval (" informe a" ,contador, "Â° hora")
    leia (temp[contador])
 
    para h de 1 ate 4 faca
       para j de 1 ate 4 faca
-         se vcel [j] > vcel [h] entao
+         se (vcel [j] > vcel [h]) e (vcel[h] <> 0) entao
             aux <- vcel [j]
             vcel [j]<- vcel [h]
             vcel [h]<- aux
@@ -61,7 +61,7 @@ para contador de 1 ate 4 faca
 fimpara
 
 para contador de 1 ate 4 faca
-   escreval ("a temperatura em Fahrenheit é ", vcel[contador], " que foi registrada as",temp[contador], ":00 corresponde a", vfar[contador], " graus celsius")
+   escreval ("a temperatura em celsius Ã© ", vcel[contador], " que foi registrada as",temp[contador], ":00 corresponde a", vfar[contador], " graus fahrenheit")
 fimpara
 
 
